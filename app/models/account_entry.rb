@@ -5,6 +5,8 @@ class AccountEntry < ActiveRecord::Base
 
 	validates_associated :account
 
+	#validates_presence_of :state
+
 	after_save :update_account_balance!
 
 	state_machine :state, :initial => :submitted do

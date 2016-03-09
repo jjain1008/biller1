@@ -1,0 +1,5 @@
+<% @time_entries.each do |te| %>
+  <% if te.account_id.nil? %>
+    <p>Time entry: <%= te.id %> has a nil account_id: <%= te.account_id %><p>
+   <% end %>
+<% end %>
